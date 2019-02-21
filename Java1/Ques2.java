@@ -7,6 +7,8 @@ public class Ques2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
         String s = sc.nextLine();
         String[] arr = s.split(" ", -1);
 
@@ -22,11 +24,12 @@ public class Ques2 {
         }
         //System.out.println(hmap);
 
-        int count=0;
-        for(Integer i: hmap.values()){
-            if(i>1) count++;
+        System.out.println("The no. of occurrences of the duplicate words in a string are: ");
+        for(String i: hmap.keySet()){
+            System.out.println(i + ": " + hmap.get(i));
         }
 
-        System.out.println("The no. of occurrences of the duplicate words in a string are " + count);
+
+
     }
 }
